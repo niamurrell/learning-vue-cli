@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: "composers",
   data() {
     return {
       composers: ["Dvorak", "Chopin", "Toscanini", "Listz"]

@@ -6,7 +6,12 @@
 </template>
 
 <script>
+import composers from "./components/Composers";
+
 export default {
+  components: {
+    composers: composers
+  },
   data() {
     return {
       title: `Composer App!`
