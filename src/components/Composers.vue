@@ -17,22 +17,21 @@
 <script>
 export default {
   name: "composers",
+  // // This is how you add props without type validation:
+  // props: ["composers"],
+  // // Otherwise, this is the same with type validation:
+  props: {
+    composers: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
-    return {
-      composers: [
-        { name: "Satie", era: "Post-Modern", show: false },
-        { name: "Chopin", era: "Romantic", show: false },
-        { name: "Toscanini", era: "Modern", show: false },
-        { name: "Listz", era: "Classical", show: false },
-        { name: "Tchaikoxsky", era: "Classical", show: false }
-      ]
-    };
+    return {};
   }
 };
 </script>
 
-<!-- If you don't put scoped on the parent and the children, -->
-<!-- ALL components will have the bottom-most styles applied -->
 <style scoped>
 h2 {
   text-align: center;

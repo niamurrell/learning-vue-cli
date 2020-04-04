@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <composers></composers>
+    <!-- Pass down props with v-bind -->
+    <composers v-bind:composers="composers"></composers>
     <app-footer></app-footer>
   </div>
 </template>
@@ -18,13 +19,19 @@ export default {
     "app-header": header
   },
   data() {
-    return {};
+    return {
+      composers: [
+        { name: "Satie", era: "Post-Modern", show: false },
+        { name: "Chopin", era: "Romantic", show: false },
+        { name: "Toscanini", era: "Modern", show: false },
+        { name: "Listz", era: "Classical", show: false },
+        { name: "Tchaikovsky", era: "Classical", show: false }
+      ]
+    };
   }
 };
 </script>
 
-<!-- If you don't put scoped on the parent and the children, -->
-<!-- ALL components will have the bottom-most styles applied -->
 <style scoped>
 h1 {
   color: orangered;
