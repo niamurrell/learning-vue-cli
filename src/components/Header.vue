@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
@@ -9,6 +9,14 @@ export default {
   name: "app-header",
   data() {
     return {};
+  },
+  methods: {
+    // This is not best practice but a demo of reference types
+    // The on-click title is NOT preserved and will be overwritten
+    // when the parent component re-renders
+    changeTitle: function() {
+      this.title = "The Best Composers!";
+    }
   },
   props: {
     title: {
