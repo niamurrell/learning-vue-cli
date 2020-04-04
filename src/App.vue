@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
+    <composers></composers>
   </div>
 </template>
 
@@ -9,13 +9,8 @@
 export default {
   data() {
     return {
-      title: `My first Vue file!`
+      title: `Composer App!`
     };
-  },
-  methods: {
-    greeting: function() {
-      return "Hiya!";
-    }
   }
 };
 </script>
