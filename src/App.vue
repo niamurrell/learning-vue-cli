@@ -1,21 +1,24 @@
 <template>
   <div id="app">
-    <h1>{{ title }}</h1>
+    <app-header></app-header>
     <composers></composers>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import header from "./components/Header";
+import footer from "./components/Footer";
 import composers from "./components/Composers";
 
 export default {
   components: {
-    composers: composers
+    composers: composers,
+    "app-footer": footer,
+    "app-header": header
   },
   data() {
-    return {
-      title: `Composer App!`
-    };
+    return {};
   }
 };
 </script>
