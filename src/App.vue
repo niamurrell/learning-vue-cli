@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <!-- Pass down props with v-bind -->
     <composers v-bind:composers="composers"></composers>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -26,7 +26,8 @@ export default {
         { name: "Toscanini", era: "Modern", show: false },
         { name: "Listz", era: "Classical", show: false },
         { name: "Tchaikovsky", era: "Classical", show: false }
-      ]
+      ],
+      title: "Vue Composers"
     };
   }
 };

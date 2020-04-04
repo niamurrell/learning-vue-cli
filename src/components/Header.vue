@@ -8,9 +8,13 @@
 export default {
   name: "app-header",
   data() {
-    return {
-      title: "Vue Composers!"
-    };
+    return {};
+  },
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
   }
 };
 </script>

@@ -11,15 +11,13 @@
         <h3 v-show="composer.show">{{ composer.era }} era</h3>
       </li>
     </ul>
+    <button v-on:click="deleteComposer">Delete Composer</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "composers",
-  // // This is how you add props without type validation:
-  // props: ["composers"],
-  // // Otherwise, this is the same with type validation:
   props: {
     composers: {
       type: Array,
@@ -28,6 +26,11 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    deleteComposer: function() {
+      this.composers.pop();
+    }
   }
 };
 </script>

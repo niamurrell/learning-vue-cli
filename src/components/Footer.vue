@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>{{ copyright }}</p>
+    <p>{{ copyright }} {{ title }}</p>
   </footer>
 </template>
 
@@ -9,8 +9,13 @@ export default {
   name: "app-footer",
   data() {
     return {
-      copyright: "Copyright 2020 Bomber"
+      copyright: "Copyright 2020"
     };
+  },
+  props: {
+    title: {
+      type: String
+    }
   }
 };
 </script>
