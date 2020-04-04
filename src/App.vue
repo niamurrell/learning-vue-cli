@@ -20,5 +20,10 @@ export default {
 };
 </script>
 
-<style>
+<!-- If you don't put scoped on the parent and the children, -->
+<!-- ALL components will have the bottom-most styles applied -->
+<style scoped>
+h1 {
+  color: orangered;
+}
 </style>
